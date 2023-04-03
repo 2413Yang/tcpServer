@@ -16,7 +16,7 @@ func NewWriter(writer io.Writer) *Writer {
 }
 
 func (w *Writer) writeString(msg string) error {
-	_,err := w.writer.Writer([]buye(msg))
+	_,err := w.writer.Writer([]byte(msg))
 	return err
 }
 

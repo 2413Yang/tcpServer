@@ -53,12 +53,12 @@ func (r *Reader) Read() (interface{},error){
 	return nil,UnknowCommand
 }
 
-func (r *Reader) ReadAll()([]interface,error){
+func (r *Reader) ReadAll()([]interface{},error){
 	commands := []interface{}{}
 	for{
 		command,err := r.Read()
 		if command != nil{
-			commands = append(aommands,command)
+			commands = append(commands,command)
 		}
 
 		if err == io.EOF{
